@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(120deg, #4b2a83, #b84fc6, #e9a8d8);
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+a:hover {
+    color: #ffe6fb;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* HEADER */
+
+.flat-page header {
+    min-height: 100px;
+    padding-top: 20px;
+}
+
+.flat-page header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flat-page header .links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    width: 100%;
+}
+
+.flat-page header .links li {
+    margin-left: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.flat-page header .links li:hover {
+    transform: translateY(-2px);
+}
+
+.flat-page header .links .nav-button {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #6d3aa8;
+}
+
+.flat-page header .links .nav-button:hover {
+    color: #ffffff;
+    background-color: #54277f;
+}
+
+/* MAIN CONTENT */
+
+.flat-page .content .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    min-height: calc(100vh - 100px);
+}
+
+.flat-page .content .info {
+    flex: 1 1 45%;
+}
+
+.flat-page .content .info h1 {
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1.15;
+}
+
+.flat-page .content .info p {
+    max-width: 520px;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.flat-page .content .info button {
+    border: 0;
+    border-radius: 20px;
+    padding: 12px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #54277f;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.flat-page .content .info button:hover {
+    background-color: #3f1d61;
+    transform: translateY(-2px);
+}
+
+.flat-page .content .info button a,
+.flat-page .content .info button a:visited {
+    color: #ffffff;
+}
+
+/* IMAGE */
+
+.flat-page .content .image {
+    flex: 1 1 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flat-page .content .image img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 30px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .flat-page header .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .flat-page header .links li {
+        margin-left: 0;
+    }
+
+    .flat-page .content .container {
+        gap: 35px;
+    }
+
+    .flat-page .content .info h1 {
+        font-size: 36px;
+    }
+}
+
+/* SMARTPHONE / SAMSUNG FLIP */
+
+@media (max-width: 767px) {
+    .flat-page header {
+        min-height: auto;
+        padding-top: 15px;
+        display: initial;
+    }
+
+    .flat-page header .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .flat-page header .links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .flat-page header .links li {
+        margin-left: 0;
+        font-size: 13px;
+    }
+
+    .flat-page header .links li a {
+        display: block;
+        padding: 7px 4px;
+    }
+
+    .flat-page header .links .nav-button {
+        padding: 7px 8px;
+    }
+
+    .flat-page .content .container {
+        gap: 0;
+        min-height: calc(100vh - 150px);
+        justify-content: center;
+        flex-direction: column-reverse;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 25px;
+    }
+
+    .flat-page .content .info {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .flat-page .content .info h1 {
+        font-size: 30px;
+        margin-bottom: 14px;
+    }
+
+    .flat-page .content .info p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .flat-page .content .info button {
+        margin-top: 20px;
+        padding: 11px 24px;
+    }
+
+    .flat-page .content .image {
+        width: 100%;
+    }
+
+    .flat-page .content .image img {
+        width: 100%;
+        max-width: 430px;
+        margin-top: 10px;
+    }
+}
+
+/* VERY NARROW FLIP COVER / SMALL PHONES */
+
+@media (max-width: 400px) {
+    .flat-page header .links {
+        gap: 5px;
+    }
+
+    .flat-page header .links li {
+        font-size: 12px;
+    }
+
+    .flat-page .content .container {
+        min-height: calc(100vh - 145px);
+    }
+
+    .flat-page .content .image img {
+        max-width: 320px;
+    }
+
+    .flat-page .content .info h1 {
+        font-size: 27px;
+    }
+
+    .flat-page .content .info p {
+        font-size: 13px;
+    }
+}
